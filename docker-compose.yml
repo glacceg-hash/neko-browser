@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  neko:
+    image: ghcr.io/m1k1o/neko/google-chrome:latest
+    restart: unless-stopped
+    shm_size: "2gb"
+    ports:
+      - "8080:8080"
+    environment:
+      NEKO_SCREEN: 1280x720@30
+      NEKO_PASSWORD: user123
+      NEKO_PASSWORD_ADMIN: admin123
+      NEKO_EPR: 52000-52100
+      NEKO_ICELITE: 1
